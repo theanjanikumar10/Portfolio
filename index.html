@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Anjanikumar Dubey - Mechatronics Engineer specializing in Robotics, Hyperloop technology, and Automation. Seeking Graduate Engineer Trainee opportunities.">
-    <meta name="keywords" content="Mechatronics Engineer, Robotics, Hyperloop, Graduate Engineer Trainee, Mumbai, R&D, Automation">
+    <meta name="description" content="Anjanikumar Dubey - Mechatronics Engineer (CGPA: 8.46) seeking Graduate Engineer Trainee opportunities in Robotics, Hyperloop, and R&D">
+    <meta name="keywords" content="Mechatronics Engineer, Robotics, Graduate Engineer Trainee, Mumbai, Hyperloop, R&D">
     <meta property="og:title" content="Anjanikumar Dubey | Mechatronics & Robotics Engineer">
-    <meta property="og:description" content="Recent Mechatronics Graduate (CGPA: 8.46) seeking GET opportunities in Robotics and R&D">
+    <meta property="og:description" content="Recent Mechatronics Graduate seeking GET opportunities in Robotics and R&D">
     <title>Anjanikumar Dubey | Mechatronics Engineer</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+        
         :root {
             --primary: #64ffda;
             --secondary: #00ff88;
@@ -22,7 +23,9 @@
             --space-pink: #ec4899;
             --nav-bg: rgba(10, 25, 47, 0.95);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Inter', sans-serif;
             background:
@@ -33,6 +36,7 @@
             color: var(--light);
             line-height: 1.6;
         }
+
         body::before {
             content: '';
             position: fixed; inset: 0;
@@ -47,8 +51,9 @@
             z-index: -1;
             opacity: 0.6;
         }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-        
+
         /* NAVIGATION */
         .nav {
             background: var(--nav-bg);
@@ -67,7 +72,7 @@
             cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         .profile-pic:hover { transform: scale(1.08); box-shadow: 0 0 20px rgba(100,255,218,0.5); }
-        
+
         /* Desktop nav */
         .nav-links {
             display: flex; gap: 2rem; list-style: none; align-items: center;
@@ -81,7 +86,7 @@
             background: var(--primary); transition: width 0.2s ease, left 0.2s ease;
         }
         .nav-links a:hover::after, .nav-links a.active::after { width: 100%; left: 0; }
-        
+
         /* Mobile toggle button */
         .menu-toggle {
             display: none;
@@ -99,18 +104,16 @@
         .menu-toggle[aria-expanded="true"] .bar { opacity: 0; }
         .menu-toggle[aria-expanded="true"] .bars::before { transform: translateY(6px) rotate(45deg); }
         .menu-toggle[aria-expanded="true"] .bars::after { transform: translateY(-6px) rotate(-45deg); }
-        
+
         /* Mobile menu panel */
-        .mobile-overlay {
-            display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 900;
-        }
+        .mobile-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 900; }
         .nav-mobile { display: none; }
-        
+
         /* HERO */
         .hero {
-            height: 100vh; display: flex; align-items: center; text-align: center;
+            min-height: 100vh; display: flex; align-items: center; text-align: center;
             background: radial-gradient(circle at center, rgba(100, 255, 218, 0.1), transparent 70%);
-            padding-top: 80px;
+            padding-top: 80px; padding-bottom: 4rem;
         }
         .hero h1 {
             font-size: clamp(3rem, 8vw, 5rem); font-weight: 700; margin-bottom: 1rem;
@@ -118,17 +121,17 @@
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
         .hero-subtitle { font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem; font-weight: 500; }
-        .hero-description { font-size: 1.1rem; color: var(--gray); margin-bottom: 2rem; max-width: 650px; margin-left: auto; margin-right: auto; }
-        
+        .hero-description { font-size: 1.1rem; color: var(--gray); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+
         .hero-stats {
-            display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; margin-bottom: 3rem;
+            display: flex; justify-content: center; gap: 2rem; margin: 2rem 0; flex-wrap: wrap;
         }
         .stat-highlight {
             background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(99, 102, 241, 0.1));
             border: 1px solid var(--primary); padding: 8px 16px; border-radius: 20px;
             font-size: 0.9rem; font-weight: 500;
         }
-        
+
         /* BUTTONS */
         .btn {
             display: inline-block; padding: 12px 30px; margin: 0 10px 10px 0;
@@ -138,9 +141,12 @@
         .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(100,255,218,0.3); }
         .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
         .btn-outline:hover { background: var(--primary); color: var(--dark); }
-        
+
         /* SKILL EXPLORER */
-        .skill-explorer { padding: 4rem 0; background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(236,72,153,0.1)), rgba(42,42,42,0.3); }
+        .skill-explorer { 
+            padding: 6rem 0; 
+            background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(236,72,153,0.1)), rgba(42,42,42,0.3); 
+        }
         .explorer-container { text-align: center; }
         .explorer-title {
             font-size: 2.5rem; background: linear-gradient(45deg, var(--primary), var(--space-purple));
@@ -156,16 +162,13 @@
             display: none; text-align: left; background: rgba(10,25,47,0.9); border: 1px solid var(--primary);
             border-radius: 10px; padding: 20px; margin-top: 20px; backdrop-filter: blur(10px); max-height: 60vh; overflow-y: auto;
         }
-        
+
         .results-header {
             color: var(--primary); font-weight: 600; margin-bottom: 1rem; font-size: 1.2rem;
             border-bottom: 2px solid var(--primary); padding-bottom: 8px;
         }
         
-        .category-group {
-            margin-bottom: 2rem;
-        }
-        
+        .category-group { margin-bottom: 2rem; }
         .category-header {
             color: var(--space-purple); font-weight: 600; font-size: 1rem; margin-bottom: 1rem;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(236, 72, 153, 0.1));
@@ -178,63 +181,65 @@
         }
         .result-item:hover { transform: translateX(5px); background: rgba(0,0,0,0.4); }
         .result-title { color: var(--primary); font-weight: 600; margin-bottom: 4px; font-size: 1rem; }
-        .result-category { color: var(--space-purple); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
         .result-description { color: var(--gray); font-size: 0.9rem; line-height: 1.4; margin-top: 4px; }
-        
-        /* EDUCATION */
-        .education { padding: 4rem 0; background: linear-gradient(135deg, rgba(10, 25, 47, 0.3), rgba(99, 102, 241, 0.05)); }
-        .education-card {
-            background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(99, 102, 241, 0.1));
-            border: 1px solid var(--primary); border-radius: 15px; padding: 2rem;
-            max-width: 600px; margin: 0 auto; text-align: center;
-        }
-        .education-card h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 0.5rem; }
-        .education-card h4 { color: var(--space-purple); font-size: 1.1rem; margin-bottom: 1rem; }
-        .university { color: var(--secondary); font-weight: 500; margin-bottom: 1rem; }
-        .education-meta { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-        .duration, .cgpa { 
-            background: rgba(100, 255, 218, 0.1); color: var(--primary); 
-            padding: 6px 12px; border-radius: 8px; font-weight: 500; 
-        }
-        
+
         /* ABOUT */
         .about { padding: 6rem 0; }
         .section-title { font-size: 3rem; color: var(--primary); text-align: center; margin-bottom: 3rem; font-weight: 700; }
-        .about-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .about-content { max-width: 900px; margin: 0 auto; text-align: center; }
         .intro-text { font-size: 1.2rem; color: var(--light); margin-bottom: 2rem; line-height: 1.8; }
         .highlight-text { color: var(--space-purple); font-weight: 600; }
         .specializations { margin: 3rem 0; }
         .spec-title { font-size: 1.5rem; color: var(--secondary); margin-bottom: 1.5rem; font-weight: 600; }
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-top: 2rem; }
-        .skill-category { background: linear-gradient(135deg, rgba(10,25,47,0.8), rgba(99,102,241,0.1)); border: 1px solid var(--primary); border-radius: 10px; padding: 1.5rem; text-align: left; }
-        .category-title { color: var(--primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .skill-category { 
+            background: linear-gradient(135deg, rgba(10,25,47,0.8), rgba(99,102,241,0.1)); 
+            border: 1px solid var(--primary); border-radius: 10px; padding: 1.5rem; text-align: left; 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .skill-category:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(100,255,218,0.2); }
+        .category-title { color: var(--primary); font-weight: 600; margin-bottom: 0.8rem; font-size: 1.1rem; }
         .category-skills { color: var(--gray); font-size: 0.95rem; line-height: 1.6; }
-        
+
         /* CONTACT */
-        .contact { padding: 4rem 0; background: linear-gradient(135deg, rgba(100, 255, 218, 0.05), rgba(99, 102, 241, 0.05)); }
-        .contact-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 2rem; }
-        .contact-info { text-align: left; }
-        .contact-item { margin-bottom: 1rem; font-size: 1.1rem; }
+        .contact { 
+            padding: 6rem 0; 
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.05), rgba(99, 102, 241, 0.05)); 
+        }
+        .contact-content { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 4rem; 
+            margin-top: 2rem; 
+            align-items: start;
+        }
+        .contact-info { }
+        .contact-item { margin-bottom: 1.2rem; font-size: 1.1rem; }
         .contact-item strong { color: var(--primary); }
-        .contact-item a { color: var(--secondary); text-decoration: none; }
+        .contact-item a { color: var(--secondary); text-decoration: none; transition: color 0.2s ease; }
         .contact-item a:hover { color: var(--primary); }
-        .cta-section { text-align: center; }
-        .cta-section h3 { color: var(--secondary); margin-bottom: 1rem; }
-        .availability { color: var(--secondary); font-weight: 600; margin-top: 1rem; font-size: 1.1rem; }
+        .cta-section { 
+            text-align: center; 
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(99, 102, 241, 0.1));
+            border: 1px solid var(--primary); border-radius: 15px; padding: 2rem;
+        }
+        .cta-section h3 { color: var(--secondary); margin-bottom: 1rem; font-size: 1.3rem; }
+        .cta-section p { margin-bottom: 1rem; }
+        .availability { color: var(--secondary); font-weight: 600; font-size: 1.1rem; }
         .social-links { margin-top: 2rem; }
         .social-links h4 { color: var(--primary); margin-bottom: 1rem; }
         .social-link {
-            display: inline-block; margin: 0 1rem 1rem 0; padding: 8px 16px;
+            display: inline-block; margin: 0 0.5rem 1rem 0; padding: 8px 16px;
             background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: var(--dark); text-decoration: none; border-radius: 20px;
             font-weight: 500; transition: transform 0.2s ease;
         }
         .social-link:hover { transform: translateY(-2px); }
-        
+
         /* FOOTER */
         .footer { background: var(--darker); text-align: center; padding: 3rem 0; border-top: 1px solid rgba(100,255,218,0.3); }
         .footer-text { color: var(--gray); font-size: 14px; }
-        
+
         /* PROFILE MODAL */
         .profile-modal { display: none; position: fixed; z-index: 2000; inset: 0; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
         .modal-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 400px; max-height: 400px; border: 3px solid var(--primary); border-radius: 15px; box-shadow: 0 0 30px rgba(100,255,218,0.5); animation: modalZoom 0.3s ease; }
@@ -242,7 +247,7 @@
         .close-modal { position: absolute; top: -15px; right: -15px; width: 40px; height: 40px; background: var(--primary); color: var(--dark); border: none; border-radius: 50%; font-size: 18px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, background 0.2s ease; }
         .close-modal:hover { background: var(--secondary); transform: scale(1.08); }
         @keyframes modalZoom { from { transform: translate(-50%, -50%) scale(0); } to { transform: translate(-50%, -50%) scale(1); } }
-        
+
         /* RESPONSIVE */
         @media (max-width: 900px) {
             .nav-container { gap: 0.5rem; }
@@ -273,8 +278,8 @@
             .profile-pic { width: 35px; height: 35px; }
             .hero-stats { gap: 1rem; }
             .stat-highlight { font-size: 0.8rem; padding: 6px 12px; }
-            .education-meta { gap: 1rem; }
             .contact-content { grid-template-columns: 1fr; gap: 2rem; }
+            .skills-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -296,9 +301,9 @@
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="qualifications.html">Qualifications</a></li>
+                    <li><a href="experience.html">Experience</a></li>
                     <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="nontech.html">Beyond Engineering</a></li>
                 </ul>
                 
                 <!-- Mobile toggle -->
@@ -321,9 +326,9 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="qualifications.html">Qualifications</a></li>
+                    <li><a href="experience.html">Experience</a></li>
                     <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="nontech.html">Beyond Engineering</a></li>
                 </ul>
             </div>
         </div>
@@ -336,18 +341,19 @@
             <p class="hero-subtitle">Mechatronics & Robotics Engineer</p>
             <p class="hero-description">
                 Recent <span class="highlight-text">Mechatronics Engineering Graduate</span> (CGPA: 8.46) 
-                specializing in robotics, automation, and Hyperloop technology. 
+                from TCET, specializing in robotics, automation, and Hyperloop technology. 
                 <strong>Actively seeking Graduate Engineer Trainee opportunities</strong> in R&D, 
                 Robotics (UAV/UUV), and Industrial Automation.
             </p>
             <div class="hero-stats">
-                <div class="stat-highlight">🏆 6+ Technical Awards</div>
-                <div class="stat-highlight">🔬 Team Lead Experience</div>
-                <div class="stat-highlight">📄 Published Research</div>
+                <div class="stat-highlight">🏆 Best Subsystem Award Winner</div>
+                <div class="stat-highlight">👥 Led Team of 35+ Engineers</div>
+                <div class="stat-highlight">📄 Published Research (JETIR)</div>
+                <div class="stat-highlight">🚀 6+ Industry Certifications</div>
             </div>
             <div class="cta-buttons">
                 <a href="#contact" class="btn">Hire Me</a>
-                <a href="#about" class="btn btn-outline">About Me</a>
+                <a href="qualifications.html" class="btn btn-outline">View Qualifications</a>
                 <button onclick="downloadResume()" class="btn">Download Resume</button>
             </div>
         </div>
@@ -359,30 +365,12 @@
             <div class="explorer-container">
                 <h2 class="explorer-title">🔍 Skill Explorer</h2>
                 <p class="explorer-subtitle">
-                    Special help for recruiters: search specific technologies, skills, or project types to discover my relevant experience, certifications, and achievements.
+                    For recruiters: Search specific technologies, skills, or project types to discover my relevant experience, certifications, and achievements.
                 </p>
                 <input type="text" class="search-input" id="searchInput"
-                       placeholder="Try: robotics, automation, hyperloop, mechatronics, embedded systems..."
+                       placeholder="Try: hyperloop, robotics, automation, matlab, leadership, certifications..."
                        onkeyup="searchContent()">
                 <div class="search-results" id="searchResults"></div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- EDUCATION -->
-    <section class="education" id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-card">
-                <div class="education-details">
-                    <h3>B.E. Mechanical and Mechatronics Engineering</h3>
-                    <h4>Specialization: Additive Manufacturing</h4>
-                    <p class="university">Thakur College of Engineering and Technology</p>
-                    <div class="education-meta">
-                        <span class="duration">Dec 2021 - May 2025</span>
-                        <span class="cgpa">CGPA: 8.46/10</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -393,33 +381,57 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p class="intro-text">
-                    I'm a <span class="highlight-text">Mechatronics Engineer</span> with a deep passion for <span class="highlight-text">robotics and automation systems</span>, integrating mechanical design with intelligent control to build practical, future-ready solutions.
+                    I'm a passionate <span class="highlight-text">Mechatronics Engineer</span> who thrives at the intersection of 
+                    <span class="highlight-text">mechanical precision and intelligent automation</span>. My work spans from 
+                    cutting-edge Hyperloop propulsion systems to sustainable bio-energy solutions.
                 </p>
                 <p class="intro-text">
-                    Former <span class="highlight-text">Team Lead of Nirmaan Hyperloop</span>, leading multi-disciplinary teams across <span class="highlight-text">electromagnetic propulsion, embedded systems, and precision robotics</span>.
+                    As the former <span class="highlight-text">Team Lead of Nirmaan Hyperloop</span>, I successfully managed 35+ engineers 
+                    in developing Mumbai's first student Hyperloop prototype, winning the 
+                    <span class="highlight-text">Best Subsystem Award</span> at the Global Hyperloop Competition.
                 </p>
+                
                 <div class="specializations">
-                    <h3 class="spec-title">Core Expertise</h3>
+                    <h3 class="spec-title">Technical Expertise</h3>
                     <div class="skills-grid">
                         <div class="skill-category">
-                            <div class="category-title">🤖 Robotics & Leadership</div>
+                            <div class="category-title">🤖 Robotics & Control Systems</div>
                             <div class="category-skills">
-                                • Led team of <strong>35+ engineers</strong> (Nirmaan Hyperloop)<br>
-                                • <strong>Best Subsystem Award</strong> - Global Hyperloop Competition<br>
-                                • MATLAB/Simulink • Arduino • RoboAnalyzer • CoppeliaSim
+                                • MATLAB/Simulink Programming<br>
+                                • Arduino & Embedded Systems<br>
+                                • RoboAnalyzer & CoppeliaSim<br>
+                                • Sensor Integration & HMI Design
                             </div>
                         </div>
+                        
                         <div class="skill-category">
-                            <div class="category-title">Softwares & Languages</div>
-                            <div class="category-skills">• Solidworks • Festo • Flash Print • Python (basics) • HTML/CSS (basics) • Ladder logic • Canva • Microsoft Office</div>
+                            <div class="category-title">⚡ Electromagnetic & Propulsion</div>
+                            <div class="category-skills">
+                                • Linear Induction Motor Design<br>
+                                • Hyperloop Propulsion Systems<br>
+                                • Electromagnetic Field Analysis<br>
+                                • Fiber Optic Gyroscope Development
+                            </div>
                         </div>
+                        
                         <div class="skill-category">
-                            <div class="category-title">Technical Skills</div>
-                            <div class="category-skills">• Mechatronics • Additive Manufacturing • Mechanical Design • Automation • Embedded Systems • Renewable Energy • Research • Electromagnetism & Electromechanical</div>
+                            <div class="category-title">🔧 Design & Manufacturing</div>
+                            <div class="category-skills">
+                                • SolidWorks CAD Design<br>
+                                • Additive Manufacturing<br>
+                                • Mechanical System Integration<br>
+                                • Prototype Development & Testing
+                            </div>
                         </div>
+                        
                         <div class="skill-category">
-                            <div class="category-title">Soft Skills</div>
-                            <div class="category-skills">• Team Management • Project Management • Public Speaking • Communication • Problem Solving • Technical & Creative Writing</div>
+                            <div class="category-title">💼 Leadership & Management</div>
+                            <div class="category-skills">
+                                • Team Leadership (35+ members)<br>
+                                • Project Management & Delivery<br>
+                                • Technical Presentation & Writing<br>
+                                • Cross-functional Coordination
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -430,7 +442,7 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Let's Connect</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -447,16 +459,22 @@
                         <a href="https://linkedin.com/in/anjanikumar-dubey" target="_blank">linkedin.com/in/anjanikumar-dubey</a>
                     </div>
                     <div class="social-links">
-                        <h4>Connect With Me:</h4>
-                        <a href="https://linkedin.com/in/anjanikumar-dubey" target="_blank" class="social-link">LinkedIn</a>
-                        <a href="https://youtu.be/KH18KlU3x7I?feature=shared" target="_blank" class="social-link">Short Film</a>
-                        <a href="https://www.instagram.com/kuch.alfaz_mere/" target="_blank" class="social-link">Poetry</a>
+                        <h4>Professional Links:</h4>
+                        <a href="https://linkedin.com/in/anjanikumar-dubey" target="_blank" class="social-link">LinkedIn Profile</a>
+                        <a href="qualifications.html" class="social-link">View Qualifications</a>
+                        <a href="experience.html" class="social-link">Technical Experience</a>
                     </div>
                 </div>
                 <div class="cta-section">
-                    <h3>Currently Seeking:</h3>
-                    <p>Graduate Engineer Trainee positions in <span class="highlight-text">Robotics, Mechatronics, and R&D</span></p>
+                    <h3>Currently Seeking</h3>
+                    <p>Graduate Engineer Trainee positions in:</p>
+                    <p><span class="highlight-text">🤖 Robotics & Automation</span></p>
+                    <p><span class="highlight-text">🔬 R&D Engineering</span></p>
+                    <p><span class="highlight-text">🚄 Transportation Technology</span></p>
                     <p class="availability">✅ Available for immediate joining</p>
+                    <p style="margin-top: 1rem; color: var(--gray); font-size: 0.9rem;">
+                        Open to opportunities across India and internationally
+                    </p>
                 </div>
             </div>
         </div>
@@ -465,12 +483,12 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p class="footer-text">Ready to Build tomorrow's technology today | Anjanikumar Dubey</p>
+            <p class="footer-text">Building tomorrow's technology today | Anjanikumar Dubey © 2025</p>
         </div>
     </footer>
     
     <script>
-        // Smooth section scroll (accounts for fixed nav)
+        // Smooth section scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -502,115 +520,52 @@
             });
         });
         
-        // Resume download - UPDATED
+        // Resume download
         function downloadResume() {
             const link = document.createElement('a');
-            link.href = 'Anjanikumar-Dubey-CV.pdf';  // Your actual PDF file
+            link.href = 'Anjanikumar-Dubey-CV-3.pdf';
             link.download = 'Anjanikumar_Dubey_Resume_Mechatronics.pdf';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            console.log('Resume downloaded');
         }
         
-        // ENHANCED SKILL EXPLORER DATABASE
+        // Enhanced Skill Database
         const skillDatabase = {
-          "mechatronics":[
-            {title:"B.E. Mechatronics Engineering (CGPA: 8.46)",description:"Mechanical and Mechatronics Engineering with specialization in Additive Manufacturing from TCET",category:"Education",year:"2025"},
-            {title:"System Integration Expert",description:"Integrated mechanical design, electronics, and control systems across multiple award-winning projects",category:"Experience",year:"2024-2025"},
-            {title:"Interdisciplinary Project Leadership",description:"Led complex projects combining design, embedded systems, and control for real-world applications",category:"Leadership",year:"2024-2025"}
+          "hyperloop": [
+            {title: "Team Lead - Nirmaan Hyperloop", description: "Led 35+ engineers developing Mumbai's first student Hyperloop prototype", category: "Leadership"},
+            {title: "Best Subsystem Award (2025)", description: "Won Best Subsystem Award at Global Hyperloop Competition, IIT Madras", category: "Achievement"},
+            {title: "International Presentations", description: "Presented at Hyperloop Global (Canada) and IIT Madras conferences", category: "Recognition"}
           ],
-          "mechanical":[
-            {title:"Mechanical Design & CAD",description:"Advanced CAD experience with SolidWorks, focusing on manufacturability and prototyping constraints",category:"Skill",proficiency:"Advanced"},
-            {title:"Additive Manufacturing Specialization",description:"B.E. specialization in 3D printing workflows, design-for-additive manufacturing principles",category:"Education",year:"2025"}
+          "robotics": [
+            {title: "Johnson & Johnson Robotics Certification", description: "Surgical robotic arm optimization using Python analysis tools", category: "Certification"},
+            {title: "Robotics Society Member", description: "Active contributor to robotics community projects and initiatives", category: "Organization"},
+            {title: "Advanced Control Systems", description: "MATLAB/Simulink for motor control, HMI design, and real-time feedback", category: "Skill"}
           ],
-          "robotics":[
-            {title:"Robotics Society Member",description:"Active member contributing to robotics community activities and projects",category:"Organization",duration:"2022-Present"},
-            {title:"Johnson & Johnson Robotics & Controls",description:"Diagnosed control inefficiencies in surgical robotic arm; proposed optimization solutions",category:"Certification",year:"2024"},
-            {title:"Robotic System Design",description:"Expertise in kinematics, actuator/motor control, sensor integration, and autonomous navigation",category:"Expertise",proficiency:"Intermediate"}
+          "matlab": [
+            {title: "Motor Control HMI Development", description: "Built comprehensive GUI for DC motor control with real-time data visualization", category: "Project"},
+            {title: "Control System Modeling", description: "Advanced Simulink programming for robotic and automation systems", category: "Expertise"}
           ],
-          "hyperloop":[
-            {title:"Team Lead – Nirmaan Hyperloop",description:"Led 35+ engineers to build Mumbai's 1st Hyperloop prototype; represented at national/international forums",category:"Leadership",duration:"2024-2025"},
-            {title:"Best Subsystem Award - Global Hyperloop Competition",description:"Won Best Subsystem Award + Special Mention in Research & Demonstration at IIT Madras (2025)",category:"Achievement",year:"2025"},
-            {title:"International Conference Presentations",description:"Presented propulsion research at Hyperloop Global (Canada) and IIT Madras competitions",category:"Presentation",year:"2023-2025"}
+          "automation": [
+            {title: "WePriSe Automation (SIH Finalist)", description: "Smart retail solution for automated weighing, pricing, and sealing systems", category: "Project"},
+            {title: "Industrial Process Control", description: "Embedded systems integration with HMI and sensor networks", category: "Experience"}
           ],
-          "linear induction motor":[
-            {title:"DSLIM/SLIM Development",description:"Manufactured and tested Double/Single-Sided Linear Induction Motors for frictionless Hyperloop propulsion",category:"Project",year:"2024-2025"},
-            {title:"Electromagnetic Propulsion Systems",description:"Applied electromagnetic principles to propulsion, levitation control, and stability systems",category:"Expertise",proficiency:"Advanced"}
+          "leadership": [
+            {title: "Hyperloop Team Management", description: "Successfully led multidisciplinary team of 35+ engineers to competition victory", category: "Achievement"},
+            {title: "Technical Presentation Skills", description: "Delivered lectures and presented at national/international conferences", category: "Skill"}
           ],
-          "electromagnetics":[
-            {title:"Emerging EM Applications Workshop",description:"Attended workshop on emerging applications of electromagnetism and wave behavior (Feb 2024)",category:"Workshop",year:"2024"},
-            {title:"Induction Motor Design Lecture",description:"Delivered expert lecture on induction motor design principles as workshop speaker",category:"Teaching",year:"2024"}
+          "certifications": [
+            {title: "GE Aerospace - Electrical Engineering", description: "Circuit protection and reliability under adverse conditions", category: "Industry Training"},
+            {title: "Siemens Project Management", description: "Strategic KPIs and dashboard development for infrastructure projects", category: "Management"},
+            {title: "UiPath Prompt Engineering", description: "AI automation using context-aware task strategies", category: "Emerging Tech"}
           ],
-          "control systems":[
-            {title:"Motor Control HMI (MATLAB)",description:"Built comprehensive GUI for DC motor control: start/stop, speed control, direction, real-time data visualization",category:"Project",year:"2024"},
-            {title:"Embedded Control Systems",description:"Designed embedded control loops for reliable actuation and sensor feedback in robotics applications",category:"Experience",proficiency:"Intermediate"}
-          ],
-          "automation":[
-            {title:"WePriSe Automation - SIH Finalist",description:"Developed automated weighing, pricing, sealing system for retail; integrated sensors with pricing logic",category:"Project",year:"2024"},
-            {title:"Industrial Process Automation",description:"Experience aligning embedded controls with process requirements and human-machine interfaces",category:"Skill",proficiency:"Intermediate"}
-          ],
-          "embedded systems":[
-            {title:"Arduino Microcontroller Programming",description:"Extensive experience in sensor I/O, timing control, calibration, and communication protocols",category:"Skill",proficiency:"Intermediate"},
-            {title:"Real-time Control Systems",description:"Implemented closed-loop control, noise mitigation, and robust I/O handling for embedded applications",category:"Experience",proficiency:"Intermediate"}
-          ],
-          "sensors":[
-            {title:"Fiber-Optic Gyroscope (FOG) Development",description:"Engineered complete system: motor-driven coil, photodetectors, Arduino interface for angular velocity measurement",category:"Project",year:"2024"},
-            {title:"Signal Conditioning & Calibration",description:"Solved noise, timing, and calibration challenges for precision sensor outputs in harsh environments",category:"Skill",proficiency:"Advanced"}
-          ],
-          "fiber optic gyroscope":[
-            {title:"Sagnac Interferometry Research",description:"Developed FOG using Sagnac effect and interferometry for high-precision orientation sensing",category:"Research",status:"Ongoing"},
-            {title:"Navigation System Applications",description:"Research focused on improving sensitivity for robotics, autonomous vehicles, and navigation systems",category:"Application",year:"2024-2025"}
-          ],
-          "renewable energy":[
-            {title:"PMKVY Solar Panel Technician (Level-3)",description:"Certified in solar system fundamentals, installation processes, and renewable energy technologies",category:"Certification",year:"2023"},
-            {title:"Bio-Battery Research (JETIR Publication)",description:"Published microbial energy harvesting research methodology and results in JETIR journal",category:"Publication",year:"2023"}
-          ],
-          "bio-battery":[
-            {title:"Microbial Energy Harvesting Project",description:"Designed innovative cell connections and optimized electrode combinations for maximum energy extraction",category:"Project",year:"2023"},
-            {title:"DIPEX 2022 Showcase",description:"Selected from 800+ projects for exhibition; demonstrated sustainable energy generation from biological processes",category:"Achievement",year:"2022"}
-          ],
-          "matlab":[
-            {title:"MATLAB/Simulink Proficiency",description:"Built complex HMIs, control simulations, and data visualization systems for motor control applications",category:"Tool",proficiency:"Advanced"},
-            {title:"Control System Modeling",description:"Modeled control logic and tested system behavior with simulated inputs/outputs",category:"Experience",proficiency:"Intermediate"}
-          ],
-          "arduino":[
-            {title:"Rapid Prototyping & Development",description:"Extensive experience in sensor integration, timing control, and communication protocols for embedded projects",category:"Tool",proficiency:"Advanced"},
-            {title:"FOG System Implementation",description:"Used Arduino for complex sensor interfacing in Fiber Optic Gyroscope development project",category:"Project",year:"2024"}
-          ],
-          "solidworks":[
-            {title:"Advanced CAD Design",description:"Proficient in 3D modeling with focus on tolerances, assembly design, and prototyping for manufacturability",category:"Tool",proficiency:"Advanced"},
-            {title:"Mechanical Design Projects",description:"Used SolidWorks for Hyperloop components, robotic systems, and additive manufacturing projects",category:"Experience",year:"2023-2025"}
-          ],
-          "project management":[
-            {title:"Siemens Project Management Simulation",description:"Developed strategic KPIs and real-time dashboards using Excel for rail infrastructure project tracking",category:"Certification",year:"2024"},
-            {title:"Hyperloop Team Leadership",description:"Coordinated cross-functional engineering teams of 35+ members toward successful competition delivery",category:"Experience",duration:"2024-2025"}
-          ],
-          "leadership":[
-            {title:"Nirmaan Hyperloop Team Lead",description:"Led technical direction, people management, and research strategy for Mumbai's first student Hyperloop prototype",category:"Leadership",duration:"2024-2025"},
-            {title:"35+ Team Members Management",description:"Successfully managed multidisciplinary teams across mechanical, electrical, and software domains",category:"Experience",year:"2024-2025"}
-          ],
-          "competitions":[
-            {title:"Global Hyperloop Competition - Best Subsystem Award",description:"Won Best Subsystem Award + Special Mention in Research & Demonstration at IIT Madras (2025)",category:"Achievement",year:"2025"},
-            {title:"Janakalyan Hackathon - 2nd Place",description:"Runner-up position at IEEE Bombay SIGHT Committee hackathon with innovative solution",category:"Achievement",year:"2024"},
-            {title:"Aavishkar Research Convention Finalist",description:"Reached finals at Mumbai University's prestigious research convention",category:"Achievement",year:"2023"},
-            {title:"DIPEX Showcase Selection",description:"Bio-Battery project selected from 800+ submissions for exhibition",category:"Achievement",year:"2022"}
-          ],
-          "certifications":[
-            {title:"GE Aerospace - Electrical Engineering",description:"Completed reliability and circuit protection training; verification planning for adverse conditions",category:"Certification",provider:"GE Aerospace (Forage)",year:"2024"},
-            {title:"Johnson & Johnson - Robotics & Controls",description:"Diagnosed surgical robotic arm inefficiencies; proposed design optimizations with simulation backing",category:"Certification",provider:"Johnson & Johnson (Forage)",year:"2024"},
-            {title:"Siemens - Project Management",description:"Strategic KPIs development and dashboard creation for infrastructure project management",category:"Certification",provider:"Siemens (Forage)",year:"2024"},
-            {title:"UiPath - Agentic Prompt Engineering",description:"Advanced AI prompt design for automation using context-aware, multi-step task strategies",category:"Certification",provider:"UiPath",year:"2024"}
-          ],
-          "achievements":[
-            {title:"Published Research Author",description:"Published bio-battery research in Journal of Emerging Technologies and Innovation Research (JETIR)",category:"Publication",year:"2023"},
-            {title:"International Conference Speaker",description:"Presented at Hyperloop Global (Canada) and Global Hyperloop Competition (IIT Madras)",category:"Presentation",year:"2023-2025"},
-            {title:"Workshop Speaker",description:"Delivered lecture on 'Design of Induction Motor' as technical workshop presenter",category:"Teaching",year:"2024"},
-            {title:"Competition Winner",description:"Multiple awards including Best Subsystem, 2nd Place Hackathon, Research Convention Finalist",category:"Achievement",year:"2022-2025"}
+          "research": [
+            {title: "JETIR Publication (2023)", description: "Published bio-battery research in Journal of Emerging Technologies", category: "Publication"},
+            {title: "Fiber Optic Gyroscope Development", description: "Ongoing research in Sagnac interferometry for precision sensing", category: "Current Project"}
           ]
         };
         
-        // ENHANCED SEARCH FUNCTIONALITY
+        // Enhanced search function
         function searchContent() {
             const query = document.getElementById('searchInput').value.toLowerCase().trim();
             const resultsDiv = document.getElementById('searchResults');
@@ -621,20 +576,16 @@
             }
             
             let allResults = [];
-            let matchedKeys = [];
             
-            // Search through database
             for (const [key, results] of Object.entries(skillDatabase)) {
                 if (key.includes(query) || query.includes(key) || 
                     results.some(item => item.title.toLowerCase().includes(query) || 
                                        item.description.toLowerCase().includes(query))) {
-                    allResults = allResults.concat(results.map(item => ({...item, searchKey: key})));
-                    if (!matchedKeys.includes(key)) matchedKeys.push(key);
+                    allResults = allResults.concat(results);
                 }
             }
             
             if (allResults.length > 0) {
-                // Group results by category
                 const groupedResults = {};
                 allResults.forEach(result => {
                     if (!groupedResults[result.category]) {
@@ -643,28 +594,16 @@
                     groupedResults[result.category].push(result);
                 });
                 
-                let html = `<div class="results-header">Found ${allResults.length} matches for "${query}" in ${matchedKeys.length} skill area(s)</div>`;
+                let html = `<div class="results-header">Found ${allResults.length} relevant matches for "${query}"</div>`;
                 
-                // Sort categories by relevance
-                const categoryOrder = ['Achievement', 'Leadership', 'Project', 'Experience', 'Certification', 'Education', 'Research', 'Publication', 'Expertise', 'Skill', 'Tool', 'Workshop', 'Organization'];
-                const sortedCategories = Object.keys(groupedResults).sort((a, b) => {
-                    return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
-                });
-                
-                sortedCategories.forEach(category => {
+                Object.entries(groupedResults).forEach(([category, items]) => {
                     html += `<div class="category-group">`;
-                    html += `<div class="category-header">${category} (${groupedResults[category].length})</div>`;
-                    groupedResults[category].forEach(result => {
-                        let additionalInfo = '';
-                        if (result.year) additionalInfo += ` • ${result.year}`;
-                        if (result.duration) additionalInfo += ` • ${result.duration}`;
-                        if (result.proficiency) additionalInfo += ` • ${result.proficiency}`;
-                        if (result.provider) additionalInfo += ` • ${result.provider}`;
-                        
+                    html += `<div class="category-header">${category} (${items.length})</div>`;
+                    items.forEach(item => {
                         html += `
                             <div class="result-item">
-                                <div class="result-title">${result.title}</div>
-                                <div class="result-description">${result.description}${additionalInfo}</div>
+                                <div class="result-title">${item.title}</div>
+                                <div class="result-description">${item.description}</div>
                             </div>
                         `;
                     });
@@ -677,15 +616,15 @@
                 resultsDiv.innerHTML = `
                     <div class="results-header">No matches found for "${query}"</div>
                     <div class="result-item">
-                        <div class="result-title">Try these popular keywords:</div>
-                        <div class="result-description">hyperloop, robotics, automation, mechatronics, embedded systems, matlab, arduino, leadership, competitions, certifications</div>
+                        <div class="result-title">Try these keywords:</div>
+                        <div class="result-description">hyperloop, robotics, matlab, automation, leadership, certifications, research</div>
                     </div>
                 `;
                 resultsDiv.style.display = 'block';
             }
         }
         
-        // Profile picture modal
+        // Profile modal
         function openProfileModal() {
             document.getElementById('profileModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
@@ -694,17 +633,10 @@
             document.getElementById('profileModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeProfileModal();
-                closeMobileMenu();
-            }
-        });
         
-        // Mobile nav toggle with ARIA
+        // Mobile navigation
         const menuToggle = document.getElementById('menuToggle');
         const navPanel = document.getElementById('navPanel');
-        const navMobile = document.getElementById('navMobile');
         const mobileOverlay = document.getElementById('mobileOverlay');
         const mobileLinks = document.querySelectorAll('#navMenuMobile a');
         
@@ -713,26 +645,30 @@
             mobileOverlay.classList.add('show');
             menuToggle.setAttribute('aria-expanded', 'true');
             menuToggle.setAttribute('aria-label', 'Close menu');
-            setTimeout(() => { if(mobileLinks[0]) mobileLinks[0].focus(); }, 100);
         }
         function closeMobileMenu() {
             navPanel.classList.remove('open');
             mobileOverlay.classList.remove('show');
             menuToggle.setAttribute('aria-expanded', 'false');
             menuToggle.setAttribute('aria-label', 'Open menu');
-            menuToggle.focus();
-        }
-        function toggleMobileMenu() {
-            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            if (expanded) closeMobileMenu(); else openMobileMenu();
         }
         
-        menuToggle.addEventListener('click', toggleMobileMenu);
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            if (expanded) closeMobileMenu(); else openMobileMenu();
+        });
         mobileOverlay.addEventListener('click', closeMobileMenu);
         mobileLinks.forEach(a => a.addEventListener('click', closeMobileMenu));
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProfileModal();
+                closeMobileMenu();
+            }
+        });
     </script>
     
-    <!-- PROFILE PICTURE MODAL -->
+    <!-- PROFILE MODAL -->
     <div id="profileModal" class="profile-modal">
         <div class="modal-content">
             <button class="close-modal" onclick="closeProfileModal()">&times;</button>
