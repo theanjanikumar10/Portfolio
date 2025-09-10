@@ -22,6 +22,10 @@
             --space-purple: #6366f1;
             --space-pink: #ec4899;
             --nav-bg: rgba(10, 25, 47, 0.95);
+            --skill-expert: #00ff88;
+            --skill-intermediate: #64ffda;
+            --skill-learning: #ff6b00;
+            --skill-basics: #8892b0;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -201,6 +205,19 @@
         .category-title { color: var(--primary); font-weight: 600; margin-bottom: 0.8rem; font-size: 1.1rem; }
         .category-skills { color: var(--gray); font-size: 0.95rem; line-height: 1.6; }
 
+        /* SKILL LEVEL INDICATORS */
+        .skill-item {
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;
+        }
+        .skill-name { color: var(--light); }
+        .skill-level {
+            padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;
+        }
+        .skill-level.expert { background: var(--skill-expert); color: var(--dark); }
+        .skill-level.intermediate { background: var(--skill-intermediate); color: var(--dark); }
+        .skill-level.learning { background: var(--skill-learning); color: var(--dark); }
+        .skill-level.basics { background: var(--skill-basics); color: var(--light); }
+
         /* CONTACT */
         .contact { 
             padding: 6rem 0; 
@@ -225,16 +242,14 @@
         }
         .cta-section h3 { color: var(--secondary); margin-bottom: 1rem; font-size: 1.3rem; }
         .cta-section p { margin-bottom: 1rem; }
-        .availability { color: var(--secondary); font-weight: 600; font-size: 1.1rem; }
-        .social-links { margin-top: 2rem; }
-        .social-links h4 { color: var(--primary); margin-bottom: 1rem; }
-        .social-link {
-            display: inline-block; margin: 0 0.5rem 1rem 0; padding: 8px 16px;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            color: var(--dark); text-decoration: none; border-radius: 20px;
-            font-weight: 500; transition: transform 0.2s ease;
+        .availability { color: var(--secondary); font-weight: 600; font-size: 1.1rem; margin-bottom: 1.5rem; }
+        
+        .contact-actions {
+            display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;
         }
-        .social-link:hover { transform: translateY(-2px); }
+        .contact-actions .btn {
+            margin: 0; width: 100%; text-align: center;
+        }
 
         /* FOOTER */
         .footer { background: var(--darker); text-align: center; padding: 3rem 0; border-top: 1px solid rgba(100,255,218,0.3); }
@@ -280,6 +295,7 @@
             .stat-highlight { font-size: 0.8rem; padding: 6px 12px; }
             .contact-content { grid-template-columns: 1fr; gap: 2rem; }
             .skills-grid { grid-template-columns: 1fr; }
+            .skill-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
         }
     </style>
 </head>
@@ -354,7 +370,6 @@
             <div class="cta-buttons">
                 <a href="#contact" class="btn">Hire Me</a>
                 <a href="qualifications.html" class="btn btn-outline">View Qualifications</a>
-                <button onclick="downloadResume()" class="btn">Download Resume</button>
             </div>
         </div>
     </section>
@@ -397,40 +412,92 @@
                         <div class="skill-category">
                             <div class="category-title">🤖 Robotics & Control Systems</div>
                             <div class="category-skills">
-                                • MATLAB/Simulink Programming<br>
-                                • Arduino & Embedded Systems<br>
-                                • RoboAnalyzer & CoppeliaSim<br>
-                                • Sensor Integration & HMI Design
+                                <div class="skill-item">
+                                    <span class="skill-name">MATLAB Simulink</span>
+                                    <span class="skill-level expert">Expert</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Arduino</span>
+                                    <span class="skill-level expert">Expert</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">RoboAnalyzer</span>
+                                    <span class="skill-level basics">Basics</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">CoppeliaSim</span>
+                                    <span class="skill-level learning">Learning</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">ROS</span>
+                                    <span class="skill-level learning">Learning</span>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="skill-category">
-                            <div class="category-title">⚡ Electromagnetic & Propulsion</div>
+                            <div class="category-title">⚡ Design & Manufacturing</div>
                             <div class="category-skills">
-                                • Linear Induction Motor Design<br>
-                                • Hyperloop Propulsion Systems<br>
-                                • Electromagnetic Field Analysis<br>
-                                • Fiber Optic Gyroscope Development
+                                <div class="skill-item">
+                                    <span class="skill-name">SolidWorks</span>
+                                    <span class="skill-level expert">Expert</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Additive Manufacturing</span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Flash Print</span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Festo</span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="skill-category">
-                            <div class="category-title">🔧 Design & Manufacturing</div>
+                            <div class="category-title">💻 Programming & Software</div>
                             <div class="category-skills">
-                                • SolidWorks CAD Design<br>
-                                • Additive Manufacturing<br>
-                                • Mechanical System Integration<br>
-                                • Prototype Development & Testing
+                                <div class="skill-item">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level basics">Basics</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">C++</span>
+                                    <span class="skill-level learning">Learning</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-level basics">Basics</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Microsoft Office</span>
+                                    <span class="skill-level expert">Expert</span>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="skill-category">
                             <div class="category-title">💼 Leadership & Management</div>
                             <div class="category-skills">
-                                • Team Leadership (35+ members)<br>
-                                • Project Management & Delivery<br>
-                                • Technical Presentation & Writing<br>
-                                • Cross-functional Coordination
+                                <div class="skill-item">
+                                    <span class="skill-name">Team Leadership</span>
+                                    <span class="skill-level expert">Expert</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Project Management</span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Public Speaking</span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Technical Writing</span>
+                                    <span class="skill-level intermediate">Intermediate</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -458,12 +525,6 @@
                         <strong>🔗 LinkedIn:</strong> 
                         <a href="https://linkedin.com/in/anjanikumar-dubey" target="_blank">linkedin.com/in/anjanikumar-dubey</a>
                     </div>
-                    <div class="social-links">
-                        <h4>Professional Links:</h4>
-                        <a href="https://linkedin.com/in/anjanikumar-dubey" target="_blank" class="social-link">LinkedIn Profile</a>
-                        <a href="qualifications.html" class="social-link">View Qualifications</a>
-                        <a href="experience.html" class="social-link">Technical Experience</a>
-                    </div>
                 </div>
                 <div class="cta-section">
                     <h3>Currently Seeking</h3>
@@ -472,9 +533,11 @@
                     <p><span class="highlight-text">🔬 R&D Engineering</span></p>
                     <p><span class="highlight-text">🚄 Transportation Technology</span></p>
                     <p class="availability">✅ Available for immediate joining</p>
-                    <p style="margin-top: 1rem; color: var(--gray); font-size: 0.9rem;">
-                        Open to opportunities across India and internationally
-                    </p>
+                    <div class="contact-actions">
+                        <a href="mailto:theanjanikumar@outlook.com" class="btn">Email Me</a>
+                        <a href="https://linkedin.com/in/anjanikumar-dubey" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+                        <button onclick="downloadResume()" class="btn">Download Resume</button>
+                    </div>
                 </div>
             </div>
         </div>
