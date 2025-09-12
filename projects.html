@@ -4,112 +4,453 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qualifications | Anjanikumar Dubey</title>
-    <meta name="description" content="Education, trainings, and certifications of Anjanikumar Dubey, Mechatronics Engineer.">
-    <link rel="stylesheet" href="main.css">
+    <meta name="description" content="Education, training, and certifications of Anjanikumar Dubey, Mechatronics Engineer.">
     <style>
-        /* ...Your main styling or import from main site for consistency... */
-        .section { padding: 4rem 0; }
-        .section-title { font-size: 2.2rem; color: var(--primary); margin-bottom: 1.5rem; text-align:center; }
-        .qualification-card, .training-card, .cert-card, .workshop-card {
-            background: linear-gradient(135deg, rgba(10, 25, 47, 0.80), rgba(99,102,241,0.1));
-            border: 1px solid var(--primary);
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            margin-bottom: 2rem;
-            max-width: 650px;
-            margin-left: auto; margin-right: auto;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #64ffda;
+            --secondary: #00ff88;
+            --accent: #ff6b00;
+            --dark: #0a192f;
+            --darker: #020c1b;
+            --light: #f8f8f8;
+            --gray: #8892b0;
+            --space-purple: #6366f1;
+            --space-pink: #ec4899;
+            --nav-bg: rgba(10, 25, 47, 0.95);
         }
-        .item-title { font-size: 1.1rem; color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;}
-        .item-sub { color: var(--space-purple); font-size:0.94rem;}
-        .item-list { margin-top: 0.65rem; margin-bottom: 1.2rem;}
-        .badge { display:inline-block; margin: 0.2rem 0.5rem 0.2rem 0; padding: 2px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: 600;}
-        .badge.level3 { background: var(--secondary); color: var(--dark);}
-        .badge.industry {background:var(--space-purple); color:white;}
-        .badge.ai {background:var(--space-pink); color:white;}
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15), transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.15), transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(100, 255, 218, 0.1), transparent 50%),
+                linear-gradient(135deg, var(--darker), #000);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background-image:
+                radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.3), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.2), transparent),
+                radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.3), transparent);
+            background-repeat: repeat;
+            background-size: 200px 100px;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        /* NAVIGATION */
+        .nav {
+            background: var(--nav-bg);
+            backdrop-filter: blur(15px);
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.3);
+            position: fixed; top: 0; left: 0; right: 0;
+            z-index: 1000;
+        }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+        .logo { display: flex; align-items: center; gap: 12px; min-width: 0; }
+        .profile-pic {
+            width: 40px; height: 40px; border-radius: 50%;
+            border: 2px solid var(--primary); object-fit: cover;
+            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+            cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .profile-pic:hover { transform: scale(1.08); box-shadow: 0 0 20px rgba(100,255,218,0.5); }
+
+        /* Desktop nav */
+        .nav-links {
+            display: flex; gap: 2rem; list-style: none; align-items: center;
+        }
+        .nav-links a {
+            color: var(--gray); text-decoration: none; font-weight: 500; position: relative; transition: color 0.2s ease;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .nav-links a::after {
+            content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 50%;
+            background: var(--primary); transition: width 0.2s ease, left 0.2s ease;
+        }
+        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; left: 0; }
+
+        /* Mobile toggle button */
+        .menu-toggle {
+            display: none;
+            background: transparent; border: 2px solid rgba(100,255,218,0.4);
+            color: var(--light); padding: 8px 10px; border-radius: 8px;
+            cursor: pointer; line-height: 1; gap: 8px; align-items: center;
+        }
+        .menu-toggle .bars { display: inline-block; width: 20px; height: 14px; position: relative; }
+        .menu-toggle .bars::before, .menu-toggle .bars::after, .menu-toggle .bar {
+            content: ''; position: absolute; left: 0; right: 0; height: 2px; background: var(--light); transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+        .menu-toggle .bar { top: 6px; }
+        .menu-toggle .bars::before { top: 0; }
+        .menu-toggle .bars::after { bottom: 0; }
+        .menu-toggle[aria-expanded="true"] .bar { opacity: 0; }
+        .menu-toggle[aria-expanded="true"] .bars::before { transform: translateY(6px) rotate(45deg); }
+        .menu-toggle[aria-expanded="true"] .bars::after { transform: translateY(-6px) rotate(-45deg); }
+
+        /* Mobile menu panel */
+        .mobile-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 900; }
+        .nav-mobile { display: none; }
+
+        /* HERO */
+        .hero {
+            padding: 6rem 0 4rem; text-align: center;
+            background: radial-gradient(circle at center, rgba(99, 102, 241, 0.1), transparent 70%);
+            padding-top: 7rem;
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--space-purple), var(--primary), var(--secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero-description { font-size: 1.2rem; color: var(--gray); max-width: 600px; margin: 0 auto; }
+
+        /* SECTION STYLES */
+        .section { padding: 4rem 0; }
+        .section-title {
+            font-size: 2.5rem; color: var(--primary); margin-bottom: 3rem; font-weight: 700; text-align: center; position: relative;
+        }
+        .section-title::after {
+            content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+            width: 100px; height: 3px; background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 2px;
+        }
+
+        /* CARDS */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .qual-card {
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(99, 102, 241, 0.1));
+            border: 1px solid var(--space-purple); border-radius: 15px; padding: 2rem;
+            transition: all 0.3s ease; position: relative; overflow: hidden;
+        }
+        .qual-card::before {
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.05), transparent); transition: left 0.5s;
+        }
+        .qual-card:hover::before { left: 100%; }
+        .qual-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2); }
+
+        .card-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+        .card-title { font-size: 1.3rem; color: var(--primary); margin-bottom: 0.5rem; font-weight: 600; }
+        .card-subtitle { color: var(--space-purple); margin-bottom: 1rem; font-weight: 500; }
+        .card-description { color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }
+        .card-meta { color: var(--secondary); font-size: 0.9rem; background: rgba(0, 255, 136, 0.1); padding: 4px 8px; border-radius: 8px; display: inline-block; }
+
+        .badge { display: inline-block; margin: 0 0.5rem 0.5rem 0; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; }
+        .badge.industry { background: var(--space-purple); color: white; }
+        .badge.ai { background: var(--space-pink); color: white; }
+        .badge.level3 { background: var(--secondary); color: var(--dark); }
+
+        /* FOOTER */
+        .footer { background: var(--darker); text-align: center; padding: 3rem 0; border-top: 1px solid rgba(100, 255, 218, 0.3); }
+        .footer-text { color: var(--gray); font-size: 14px; }
+
+        /* PROFILE MODAL */
+        .profile-modal { display: none; position: fixed; z-index: 2000; inset: 0; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .modal-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 400px; max-height: 400px; border: 3px solid var(--primary); border-radius: 15px; box-shadow: 0 0 30px rgba(100,255,218,0.5); animation: modalZoom 0.3s ease; }
+        .modal-image { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+        .close-modal { position: absolute; top: -15px; right: -15px; width: 40px; height: 40px; background: var(--primary); color: var(--dark); border: none; border-radius: 50%; font-size: 18px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, background 0.2s ease; }
+        .close-modal:hover { background: var(--secondary); transform: scale(1.08); }
+        @keyframes modalZoom { from { transform: translate(-50%, -50%) scale(0); } to { transform: translate(-50%, -50%) scale(1); } }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .nav-container { gap: 0.5rem; }
+            .menu-toggle { display: inline-flex; }
+            .nav-links { display: none; }
+            .nav-mobile {
+                display: block; position: fixed; top: 64px; right: 0; left: 0;
+                transform: translateY(-8px); z-index: 950;
+            }
+            .nav-panel {
+                background: var(--nav-bg); border-bottom: 1px solid rgba(100,255,218,0.2);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.35); max-height: 0; overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+            .nav-panel.open { max-height: 70vh; }
+            .nav-panel ul { list-style: none; padding: 12px 16px; display: grid; gap: 10px; }
+            .nav-panel a {
+                display: block; width: 100%; color: var(--light); text-decoration: none; padding: 12px 10px;
+                border-radius: 8px; border: 1px solid transparent;
+            }
+            .nav-panel a:focus, .nav-panel a:hover { border-color: rgba(100,255,218,0.35); background: rgba(100,255,218,0.06); outline: none; }
+            .mobile-overlay.show { display: block; }
+        }
+
+        @media (max-width: 768px) {
+            .cards-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+            .container { padding: 0 1rem; }
+            .profile-pic { width: 35px; height: 35px; }
+        }
     </style>
 </head>
 <body>
-    <!-- Add navigation/header as in your index.html for consistency -->
+    <!-- NAV OVERLAY FOR MOBILE -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <section class="section" id="education">
-        <h2 class="section-title">Education</h2>
-        <div class="qualification-card">
-            <div class="item-title">B.E. Mechanical & Mechatronics Engineering</div>
-            <div class="item-sub">Specialization: Additive Manufacturing</div>
-            <div><span class="badge">Thakur College of Engineering and Technology</span></div>
-            <div class="item-list">
-                <strong>2021–2025</strong> &middot; <strong>CGPA: 8.46/10</strong>
+    <!-- NAVIGATION -->
+    <nav class="nav" role="navigation" aria-label="Main menu">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="PP.jpg" alt="Anjanikumar Dubey" class="profile-pic" onclick="openProfileModal()">
+                    <strong>Anjanikumar Dubey</strong>
+                </div>
+
+                <!-- Desktop links -->
+                <ul class="nav-links" id="navMenuDesktop">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="achievements.html">Experience</a></li>
+                    <li><a href="nontech.html">Achievements</a></li>
+                </ul>
+
+                <!-- Mobile toggle -->
+                <button class="menu-toggle" id="menuToggle"
+                        aria-expanded="false"
+                        aria-controls="navPanel"
+                        aria-label="Open menu">
+                    <span class="bars">
+                        <span class="bar"></span>
+                    </span>
+                    Menu
+                </button>
             </div>
-            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">
-                Core subjects: Mechatronics, Additive Manufacturing, Robotics, Control Systems, Mechanical Design, Electrical and Embedded Systems
+        </div>
+
+        <!-- Mobile panel -->
+        <div class="nav-mobile" id="navMobile">
+            <div class="nav-panel" id="navPanel">
+                <ul id="navMenuMobile">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="qualifications.html">Qualifications</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Qualifications</h1>
+            <p class="hero-description">
+                Educational background, professional training programs, and industry certifications 
+                that build the foundation of my technical expertise.
+            </p>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🎓 Education</h2>
+            <div class="cards-grid">
+                <div class="qual-card">
+                    <span class="card-icon">🎓</span>
+                    <h3 class="card-title">B.E. Mechanical & Mechatronics Engineering</h3>
+                    <p class="card-subtitle">Specialization: Additive Manufacturing</p>
+                    <p class="card-description">
+                        Comprehensive study in mechatronics systems, robotics, control systems, mechanical design, 
+                        and additive manufacturing technologies. Strong foundation in interdisciplinary engineering 
+                        with hands-on project experience.
+                    </p>
+                    <p class="card-description">
+                        <strong>Institution:</strong> Thakur College of Engineering and Technology<br>
+                        <strong>Duration:</strong> Dec 2021 - May 2025<br>
+                        <strong>CGPA:</strong> 8.46/10
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="trainings">
-        <h2 class="section-title">Trainings</h2>
-        <div class="training-card">
-            <div class="item-title">Assistant Solar Panel Technician</div>
-            <div class="item-sub">PMKVY | Skill India <span class="badge level3">Level 3 Certification</span></div>
-            <div class="item-list">
-                Basics of solar panels, renewable energy systems, installation & site procedures. Hands-on training + certification.
+    <!-- CERTIFICATIONS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🏅 Professional Certifications</h2>
+            <div class="cards-grid">
+                <div class="qual-card">
+                    <span class="card-icon">🤖</span>
+                    <h3 class="card-title">Robotics & Controls</h3>
+                    <p class="card-subtitle">Johnson & Johnson MedTech (Forage) <span class="badge industry">Industry</span></p>
+                    <p class="card-description">
+                        Diagnosed control inefficiencies in surgical robotic arms using Python-based analysis tools. 
+                        Proposed design optimizations to improve response time and reliability with simulation-backed recommendations.
+                    </p>
+                    <span class="card-meta">2024</span>
+                </div>
+
+                <div class="qual-card">
+                    <span class="card-icon">⚡</span>
+                    <h3 class="card-title">Electrical Engineering | Explore Engineering</h3>
+                    <p class="card-subtitle">GE Aerospace (Forage) <span class="badge industry">Industry</span></p>
+                    <p class="card-description">
+                        Designed electrical distribution systems and avionics reliability under adverse conditions. 
+                        Applied circuit protection strategies and aerospace compliance standards with simulation tools.
+                    </p>
+                    <span class="card-meta">2024</span>
+                </div>
+
+                <div class="qual-card">
+                    <span class="card-icon">📊</span>
+                    <h3 class="card-title">Project Management Simulation</h3>
+                    <p class="card-subtitle">Siemens (Forage) <span class="badge industry">Industry</span></p>
+                    <p class="card-description">
+                        Developed strategic KPIs and real-time dashboards using Excel for rail infrastructure projects. 
+                        Applied analytical problem-solving for construction delays and stakeholder management.
+                    </p>
+                    <span class="card-meta">2024</span>
+                </div>
+
+                <div class="qual-card">
+                    <span class="card-icon">🤖</span>
+                    <h3 class="card-title">Agentic Prompt Engineering</h3>
+                    <p class="card-subtitle">UiPath <span class="badge ai">AI/ML</span></p>
+                    <p class="card-description">
+                        Completed hands-on training in AI prompt design for automation using UiPath's agentic frameworks, 
+                        focusing on context-aware, multi-step task automation strategies.
+                    </p>
+                    <span class="card-meta">2024</span>
+                </div>
             </div>
-            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2023</div>
         </div>
     </section>
 
-    <section class="section" id="certifications">
-        <h2 class="section-title">Certifications</h2>
-        <div class="cert-card">
-            <div class="item-title">Robotics & Controls</div>
-            <div class="item-sub">Johnson & Johnson MedTech (Forage) <span class="badge industry">Industry</span></div>
-            <div class="item-list">
-                Diagnosed control inefficiencies and proposed design optimizations for surgical robotic arms using Python tools; delivered simulation-backed recommendations.
+    <!-- TRAINING -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">⚡ Specialized Training</h2>
+            <div class="cards-grid">
+                <div class="qual-card">
+                    <span class="card-icon">☀️</span>
+                    <h3 class="card-title">Assistant Solar Panel Technician</h3>
+                    <p class="card-subtitle">PMKVY | Skill India <span class="badge level3">Level 3</span></p>
+                    <p class="card-description">
+                        Comprehensive training in solar panel fundamentals, installation processes, and renewable energy systems. 
+                        Hands-on experience with solar technology and sustainable energy solutions.
+                    </p>
+                    <span class="card-meta">2023</span>
+                </div>
             </div>
-            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2024</div>
-        </div>
-        <div class="cert-card">
-            <div class="item-title">Electrical Engineering | Explore Engineering</div>
-            <div class="item-sub">GE Aerospace (Forage) <span class="badge industry">Industry</span></div>
-            <div class="item-list">
-                Power distribution reliability and circuit protection in aerospace systems; simulation tools for design assessment and compliance.
-            </div>
-            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2024</div>
-        </div>
-        <div class="cert-card">
-            <div class="item-title">Project Management Simulation</div>
-            <div class="item-sub">Siemens (Forage) <span class="badge industry">Industry</span></div>
-            <div class="item-list">
-                Strategic KPI development and real-time dashboards using Excel for rail infrastructure projects; problem-solving for construction delays.
-            </div>
-            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2024</div>
-        </div>
-        <div class="cert-card">
-            <div class="item-title">Agentic Prompt Engineering - AI Automation</div>
-            <div class="item-sub">UiPath <span class="badge ai">AI/ML</span></div>
-            <div class="item-list">
-                Completed hands-on training in AI prompt design and advanced automation strategies using UiPath's agentic framework.
-            </div>
-            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2024</div>
         </div>
     </section>
 
-    <section class="section" id="workshops">
-        <h2 class="section-title">Relevant Workshops</h2>
-        <div class="workshop-card">
-            <div class="item-title">Mechanical Design Workshop</div>
-            <div class="item-list">Workshop on mechanical engineering design, reading mechanical drawings, prototyping and aspect dimensions (2024)</div>
-        </div>
-        <div class="workshop-card">
-            <div class="item-title">Design of Induction Motor (Lecture Delivered)</div>
-            <div class="item-list">Speaker: Design fundamentals, EM basics, and principles of induction motors (Feb 2024).</div>
-        </div>
-        <div class="workshop-card">
-            <div class="item-title">Emerging Applications in Electromagnetism</div>
-            <div class="item-list">Attended in-depth workshop on modern and future applications of electromagnetism in engineering (2024)</div>
+    <!-- WORKSHOPS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🛠 Technical Workshops</h2>
+            <div class="cards-grid">
+                <div class="qual-card">
+                    <span class="card-icon">⚙️</span>
+                    <h3 class="card-title">Design of Induction Motor (Speaker)</h3>
+                    <p class="card-description">
+                        Delivered expert lecture on induction motor design fundamentals, electromagnetic principles, 
+                        and engineering applications as workshop speaker.
+                    </p>
+                    <span class="card-meta">Feb 2024</span>
+                </div>
+
+                <div class="qual-card">
+                    <span class="card-icon">🔬</span>
+                    <h3 class="card-title">Emerging Applications of Electromagnetism</h3>
+                    <p class="card-description">
+                        Advanced workshop covering modern electromagnetic applications, wave behavior analysis, 
+                        and cutting-edge field developments in engineering systems.
+                    </p>
+                    <span class="card-meta">Feb 2024</span>
+                </div>
+
+                <div class="qual-card">
+                    <span class="card-icon">🔧</span>
+                    <h3 class="card-title">Mechanical Design Workshop</h3>
+                    <p class="card-description">
+                        Comprehensive training in mechanical design principles, technical drawing interpretation, 
+                        prototyping processes, and dimensional analysis.
+                    </p>
+                    <span class="card-meta">Feb 2024</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Add a footer/navigation consistent with the rest of your site -->
+    <!-- PROFILE PICTURE MODAL -->
+    <div id="profileModal" class="profile-modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeProfileModal()">&times;</button>
+            <img src="PP.jpg" alt="Anjanikumar Dubey - Full View" class="modal-image">
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Building tomorrow's technology today | &copy; 2025 Anjanikumar Dubey
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Profile picture modal
+        function openProfileModal() {
+            document.getElementById('profileModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeProfileModal() {
+            document.getElementById('profileModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Mobile nav toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navPanel = document.getElementById('navPanel');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileLinks = document.querySelectorAll('#navMenuMobile a');
+
+        function openMobileMenu() {
+            navPanel.classList.add('open');
+            mobileOverlay.classList.add('show');
+            menuToggle.setAttribute('aria-expanded', 'true');
+            menuToggle.setAttribute('aria-label', 'Close menu');
+        }
+        function closeMobileMenu() {
+            navPanel.classList.remove('open');
+            mobileOverlay.classList.remove('show');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Open menu');
+        }
+
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            if (expanded) closeMobileMenu(); else openMobileMenu();
+        });
+        mobileOverlay.addEventListener('click', closeMobileMenu);
+        mobileLinks.forEach(a => a.addEventListener('click', closeMobileMenu));
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeProfileModal();
+                closeMobileMenu();
+            }
+        });
+    </script>
 </body>
 </html>
