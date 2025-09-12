@@ -3,464 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects & Research | Anjanikumar Dubey</title>
+    <title>Qualifications | Anjanikumar Dubey</title>
+    <meta name="description" content="Education, trainings, and certifications of Anjanikumar Dubey, Mechatronics Engineer.">
+    <link rel="stylesheet" href="main.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
-
-        :root {
-            --primary: #64ffda;
-            --secondary: #00ff88;
-            --accent: #ff6b00;
-            --dark: #0a192f;
-            --darker: #020c1b;
-            --light: #f8f8f8;
-            --gray: #8892b0;
-            --space-purple: #6366f1;
-            --space-pink: #ec4899;
-            --nav-bg: rgba(10, 25, 47, 0.95);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15), transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.15), transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(100, 255, 218, 0.1), transparent 50%),
-                linear-gradient(135deg, var(--darker), #000);
-            color: var(--light);
-            line-height: 1.6;
-        }
-
-        body::before {
-            content: '';
-            position: fixed; inset: 0;
-            background-image:
-                radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
-                radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
-                radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.3), transparent),
-                radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.2), transparent),
-                radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.3), transparent);
-            background-repeat: repeat;
-            background-size: 200px 100px;
-            z-index: -1;
-            opacity: 0.6;
-        }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-
-        /* NAVIGATION */
-        .nav {
-            background: var(--nav-bg);
-            backdrop-filter: blur(15px);
-            padding: 0.8rem 0;
-            border-bottom: 1px solid rgba(100, 255, 218, 0.3);
-            position: fixed; top: 0; left: 0; right: 0;
-            z-index: 1000;
-        }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-        .logo { display: flex; align-items: center; gap: 12px; min-width: 0; }
-        .profile-pic {
-            width: 40px; height: 40px; border-radius: 50%;
-            border: 2px solid var(--primary); object-fit: cover;
-            box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
-            cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .profile-pic:hover { transform: scale(1.08); box-shadow: 0 0 20px rgba(100,255,218,0.5); }
-
-        /* Desktop nav */
-        .nav-links {
-            display: flex; gap: 2rem; list-style: none; align-items: center;
-        }
-        .nav-links a {
-            color: var(--gray); text-decoration: none; font-weight: 500; position: relative; transition: color 0.2s ease;
-        }
-        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
-        .nav-links a::after {
-            content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 50%;
-            background: var(--primary); transition: width 0.2s ease, left 0.2s ease;
-        }
-        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; left: 0; }
-
-        /* Mobile toggle button */
-        .menu-toggle {
-            display: none;
-            background: transparent; border: 2px solid rgba(100,255,218,0.4);
-            color: var(--light); padding: 8px 10px; border-radius: 8px;
-            cursor: pointer; line-height: 1; gap: 8px; align-items: center;
-        }
-        .menu-toggle .bars { display: inline-block; width: 20px; height: 14px; position: relative; }
-        .menu-toggle .bars::before, .menu-toggle .bars::after, .menu-toggle .bar {
-            content: ''; position: absolute; left: 0; right: 0; height: 2px; background: var(--light); transition: transform 0.25s ease, opacity 0.25s ease;
-        }
-        .menu-toggle .bar { top: 6px; }
-        .menu-toggle .bars::before { top: 0; }
-        .menu-toggle .bars::after { bottom: 0; }
-        .menu-toggle[aria-expanded="true"] .bar { opacity: 0; }
-        .menu-toggle[aria-expanded="true"] .bars::before { transform: translateY(6px) rotate(45deg); }
-        .menu-toggle[aria-expanded="true"] .bars::after { transform: translateY(-6px) rotate(-45deg); }
-
-        /* Mobile menu panel */
-        .mobile-overlay {
-            display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 900;
-        }
-        .nav-mobile {
-            display: none;
-        }
-
-        /* HERO */
-        .hero {
-            padding: 6rem 0 4rem; text-align: center;
-            background: radial-gradient(circle at center, rgba(100, 255, 218, 0.1), transparent 70%);
-            padding-top: 7rem;
-        }
-        .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 700; margin-bottom: 1rem;
-            background: linear-gradient(45deg, var(--primary), var(--space-purple), var(--secondary));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-        }
-        .hero-description { font-size: 1.2rem; color: var(--gray); max-width: 600px; margin: 0 auto; }
-
-        /* SECTION STYLES */
+        /* ...Your main styling or import from main site for consistency... */
         .section { padding: 4rem 0; }
-        .section-title {
-            font-size: 2.5rem; color: var(--primary); margin-bottom: 3rem; font-weight: 700; text-align: center; position: relative;
+        .section-title { font-size: 2.2rem; color: var(--primary); margin-bottom: 1.5rem; text-align:center; }
+        .qualification-card, .training-card, .cert-card, .workshop-card {
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.80), rgba(99,102,241,0.1));
+            border: 1px solid var(--primary);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            max-width: 650px;
+            margin-left: auto; margin-right: auto;
         }
-        .section-title::after {
-            content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
-            width: 100px; height: 3px; background: linear-gradient(45deg, var(--primary), var(--secondary)); border-radius: 2px;
-        }
-
-        /* PROJECT CARDS */
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-        .project-card {
-            background: linear-gradient(135deg, rgba(10, 25, 47, 0.8), rgba(99, 102, 241, 0.05));
-            border: 1px solid rgba(100, 255, 218, 0.3); border-radius: 15px; padding: 2rem;
-            transition: all 0.3s ease; position: relative; overflow: hidden;
-        }
-        .project-card::before {
-            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.05), transparent); transition: left 0.5s;
-        }
-        .project-card:hover::before { left: 100%; }
-        .project-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2); }
-        .project-image { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem; border: 2px solid rgba(100, 255, 218, 0.2); }
-        .project-title { font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem; font-weight: 600; }
-        .project-description { color: var(--gray); line-height: 1.7; margin-bottom: 1rem; }
-        .project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; }
-        .tech-tag { background: linear-gradient(45deg, var(--space-purple), var(--space-pink)); color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: 500; }
-
-        /* RESEARCH SECTION */
-        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .research-card { background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.05)); border: 1px solid var(--space-purple); border-radius: 12px; padding: 2rem; transition: all 0.3s ease; }
-        .research-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2); }
-        .research-title { font-size: 1.2rem; color: var(--space-purple); margin-bottom: 1rem; font-weight: 600; }
-        .research-status { display: inline-block; background: var(--secondary); color: var(--dark); padding: 4px 10px; border-radius: 8px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
-        .research-status.ongoing { background: var(--accent); }
-
-        /* FOOTER */
-        .footer { background: var(--darker); text-align: center; padding: 3rem 0; border-top: 1px solid rgba(100, 255, 218, 0.3); }
-        .footer-text { color: var(--gray); font-size: 14px; }
-
-        /* PROFILE MODAL */
-        .profile-modal { display: none; position: fixed; z-index: 2000; inset: 0; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
-        .modal-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 400px; max-height: 400px; border: 3px solid var(--primary); border-radius: 15px; box-shadow: 0 0 30px rgba(100,255,218,0.5); animation: modalZoom 0.3s ease; }
-        .modal-image { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
-        .close-modal { position: absolute; top: -15px; right: -15px; width: 40px; height: 40px; background: var(--primary); color: var(--dark); border: none; border-radius: 50%; font-size: 18px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, background 0.2s ease; }
-        .close-modal:hover { background: var(--secondary); transform: scale(1.08); }
-        @keyframes modalZoom { from { transform: translate(-50%, -50%) scale(0); } to { transform: translate(-50%, -50%) scale(1); } }
-
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .nav-container { gap: 0.5rem; }
-            .menu-toggle { display: inline-flex; }
-            .nav-links { display: none; }
-            .nav-mobile {
-                display: block;
-                position: fixed;
-                top: 64px;
-                right: 0; left: 0;
-                transform: translateY(-8px);
-                z-index: 950;
-            }
-            .nav-panel {
-                background: var(--nav-bg);
-                border-bottom: 1px solid rgba(100,255,218,0.2);
-                box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-            }
-            .nav-panel.open { max-height: 70vh; }
-            .nav-panel ul { list-style: none; padding: 12px 16px; display: grid; gap: 10px; }
-            .nav-panel a {
-                display: block; width: 100%;
-                color: var(--light); text-decoration: none; padding: 12px 10px;
-                border-radius: 8px; border: 1px solid transparent;
-            }
-            .nav-panel a:focus, .nav-panel a:hover { border-color: rgba(100,255,218,0.35); background: rgba(100,255,218,0.06); outline: none; }
-            .mobile-overlay.show { display: block; }
-        }
-
-        @media (max-width: 768px) {
-            .projects-grid { grid-template-columns: 1fr; }
-            .research-grid { grid-template-columns: 1fr; }
-            .section-title { font-size: 2rem; }
-            .container { padding: 0 1rem; }
-            .profile-pic { width: 35px; height: 35px; }
-        }
+        .item-title { font-size: 1.1rem; color: var(--primary); font-weight: 600; margin-bottom: 0.3rem;}
+        .item-sub { color: var(--space-purple); font-size:0.94rem;}
+        .item-list { margin-top: 0.65rem; margin-bottom: 1.2rem;}
+        .badge { display:inline-block; margin: 0.2rem 0.5rem 0.2rem 0; padding: 2px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: 600;}
+        .badge.level3 { background: var(--secondary); color: var(--dark);}
+        .badge.industry {background:var(--space-purple); color:white;}
+        .badge.ai {background:var(--space-pink); color:white;}
     </style>
 </head>
 <body>
-    <!-- NAV OVERLAY FOR MOBILE -->
-    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <!-- Add navigation/header as in your index.html for consistency -->
 
-    <!-- NAVIGATION -->
-    <nav class="nav" role="navigation" aria-label="Main menu">
-        <div class="container">
-            <div class="nav-container">
-                <div class="logo">
-                    <img src="PP.jpg" alt="Anjanikumar Dubey" class="profile-pic" onclick="openProfileModal()">
-                    <strong>Anjanikumar Dubey</strong>
-                </div>
-
-                <!-- Desktop links -->
-                <ul class="nav-links" id="navMenuDesktop">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#search">Skill Explorer</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="nontech.html">Beyond Engineering</a></li>
-                </ul>
-
-                <!-- Mobile toggle -->
-                <button class="menu-toggle" id="menuToggle"
-                        aria-expanded="false"
-                        aria-controls="navPanel"
-                        aria-label="Open menu">
-                    <span class="bars">
-                        <span class="bar"></span>
-                    </span>
-                    Menu
-                </button>
+    <section class="section" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="qualification-card">
+            <div class="item-title">B.E. Mechanical & Mechatronics Engineering</div>
+            <div class="item-sub">Specialization: Additive Manufacturing</div>
+            <div><span class="badge">Thakur College of Engineering and Technology</span></div>
+            <div class="item-list">
+                <strong>2021–2025</strong> &middot; <strong>CGPA: 8.46/10</strong>
             </div>
-        </div>
-
-        <!-- Mobile panel -->
-        <div class="nav-mobile" id="navMobile">
-            <div class="nav-panel" id="navPanel">
-                <ul id="navMenuMobile">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="index.html#search">Skill Explorer</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="achievements.html">Achievements</a></li>
-                    <li><a href="nontech.html">Beyond Engineering</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="container">
-            <h1>Projects & Research</h1>
-            <p class="hero-description">
-                Innovative solutions spanning robotics, automation, and sustainable technology. 
-                Each project represents a step toward solving real-world challenges through engineering excellence.
-            </p>
-        </div>
-    </section>
-
-    <!-- PROJECTS SECTION -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="Weprise.jpg" alt="WePriSe Automation" class="project-image">
-                    <h3 class="project-title">WePriSe Automation – Smart Retail Solution</h3>
-                    <p class="project-description">
-                        Developed an automated grocery bag weighing, pricing, and sealing system that streamlines retail operations. 
-                        The solution integrates weight sensors, pricing algorithms, and automated sealing mechanisms to reduce checkout time and improve accuracy.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Automation</span>
-                        <span class="tech-tag">IoT</span>
-                        <span class="tech-tag">Smart Systems</span>
-                        <span class="tech-tag">SIH Finalist</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="bio battery.jpg" alt="Bio Battery" class="project-image">
-                    <h3 class="project-title">Bio-Battery – Microbial Energy Harvesting</h3>
-                    <p class="project-description">
-                        Innovative sustainable energy solution that harnesses electrical energy from microbial activity in soil. 
-                        This bio-electrochemical system demonstrates the potential for clean, renewable energy generation from biological processes.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Bio-Energy</span>
-                        <span class="tech-tag">Sustainability</span>
-                        <span class="tech-tag">Electrochemistry</span>
-                        <span class="tech-tag">Published</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="FOG.jpg" alt="Fiber Optic Gyroscope" class="project-image">
-                    <h3 class="project-title">Fiber Optic Gyroscope – Sagnac-Based Sensor</h3>
-                    <p class="project-description">
-                        Advanced prototype development utilizing interferometry and the Sagnac effect for high-precision angular velocity detection. 
-                        Applications include navigation systems, robotics, and autonomous vehicle orientation sensing.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Fiber Optics</span>
-                        <span class="tech-tag">Sensors</span>
-                        <span class="tech-tag">Interferometry</span>
-                        <span class="tech-tag">Precision</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="LIM.jpg" alt="Double-Sided Linear Induction Motor" class="project-image">
-                    <h3 class="project-title">DSLIM – Double-Sided Linear Induction Motor</h3>
-                    <p class="project-description">
-                        Led the research and development of electromagnetic propulsion systems for Hyperloop technology under Nirmaan Hyperloop. 
-                        Designed and optimized linear motor systems for high-speed transportation applications.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Hyperloop</span>
-                        <span class="tech-tag">Electromagnetics</span>
-                        <span class="tech-tag">Propulsion</span>
-                        <span class="tech-tag">Team Lead</span>
-                    </div>
-                </div>
+            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">
+                Core subjects: Mechatronics, Additive Manufacturing, Robotics, Control Systems, Mechanical Design, Electrical and Embedded Systems
             </div>
         </div>
     </section>
 
-    <!-- RESEARCH SECTION -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Research & Publications</h2>
-            
-            <div class="research-grid">
-                <div class="research-card">
-                    <span class="research-status">Published</span>
-                    <h3 class="research-title">Bio-Battery Research Publication</h3>
-                    <p class="project-description">
-                        Published comprehensive research on microbial energy harvesting in the Journal of Emerging Technologies 
-                        and Innovation Research (JETIR), July 2023. The paper details methodology, experimental results, and 
-                        potential applications of bio-electrochemical systems.
-                    </p>
-                </div>
-
-                <div class="research-card">
-                    <span class="research-status">Presented</span>
-                    <h3 class="research-title">Fiber Optic Gyroscope Research</h3>
-                    <p class="project-description">
-                        Advanced research on Sagnac interferometry-based gyroscopic systems nearing completion. 
-                        Focus on improving sensitivity and reducing noise for autonomous vehicle and robotics applications. 
-                        Manuscript in preparation for submission.
-                    </p>
-                </div>
-
-                <div class="research-card">
-                    <span class="research-status">Presented</span>
-                    <h3 class="research-title">International Conference Presentations</h3>
-                    <p class="project-description">
-                        Presented Hyperloop propulsion research at prestigious international forums including 
-                        Hyperloop Global (Canada) and Global Hyperloop Competition (IIT Madras). Shared insights 
-                        on linear motor optimization and electromagnetic levitation systems.
-                    </p>
-                </div>
+    <section class="section" id="trainings">
+        <h2 class="section-title">Trainings</h2>
+        <div class="training-card">
+            <div class="item-title">Assistant Solar Panel Technician</div>
+            <div class="item-sub">PMKVY | Skill India <span class="badge level3">Level 3 Certification</span></div>
+            <div class="item-list">
+                Basics of solar panels, renewable energy systems, installation & site procedures. Hands-on training + certification.
             </div>
+            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2023</div>
         </div>
     </section>
 
-    <!-- PROFILE PICTURE MODAL -->
-    <div id="profileModal" class="profile-modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeProfileModal()">&times;</button>
-            <img src="PP.jpg" alt="Anjanikumar Dubey - Full View" class="modal-image">
+    <section class="section" id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-card">
+            <div class="item-title">Robotics & Controls</div>
+            <div class="item-sub">Johnson & Johnson MedTech (Forage) <span class="badge industry">Industry</span></div>
+            <div class="item-list">
+                Diagnosed control inefficiencies and proposed design optimizations for surgical robotic arms using Python tools; delivered simulation-backed recommendations.
+            </div>
+            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2024</div>
         </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-text">
-                Building tomorrow's technology today | &copy; 2025 Anjanikumar Dubey
-            </p>
+        <div class="cert-card">
+            <div class="item-title">Electrical Engineering | Explore Engineering</div>
+            <div class="item-sub">GE Aerospace (Forage) <span class="badge industry">Industry</span></div>
+            <div class="item-list">
+                Power distribution reliability and circuit protection in aerospace systems; simulation tools for design assessment and compliance.
+            </div>
+            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2024</div>
         </div>
-    </footer>
+        <div class="cert-card">
+            <div class="item-title">Project Management Simulation</div>
+            <div class="item-sub">Siemens (Forage) <span class="badge industry">Industry</span></div>
+            <div class="item-list">
+                Strategic KPI development and real-time dashboards using Excel for rail infrastructure projects; problem-solving for construction delays.
+            </div>
+            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2024</div>
+        </div>
+        <div class="cert-card">
+            <div class="item-title">Agentic Prompt Engineering - AI Automation</div>
+            <div class="item-sub">UiPath <span class="badge ai">AI/ML</span></div>
+            <div class="item-list">
+                Completed hands-on training in AI prompt design and advanced automation strategies using UiPath's agentic framework.
+            </div>
+            <div class="item-list" style="color:var(--gray);font-size:0.98rem;">2024</div>
+        </div>
+    </section>
 
-    <script>
-        // Smooth section scroll (accounts for fixed nav)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href.length > 1) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        const offsetTop = target.offsetTop - 80;
-                        window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-                        closeMobileMenu();
-                    }
-                }
-            });
-        });
+    <section class="section" id="workshops">
+        <h2 class="section-title">Relevant Workshops</h2>
+        <div class="workshop-card">
+            <div class="item-title">Mechanical Design Workshop</div>
+            <div class="item-list">Workshop on mechanical engineering design, reading mechanical drawings, prototyping and aspect dimensions (2024)</div>
+        </div>
+        <div class="workshop-card">
+            <div class="item-title">Design of Induction Motor (Lecture Delivered)</div>
+            <div class="item-list">Speaker: Design fundamentals, EM basics, and principles of induction motors (Feb 2024).</div>
+        </div>
+        <div class="workshop-card">
+            <div class="item-title">Emerging Applications in Electromagnetism</div>
+            <div class="item-list">Attended in-depth workshop on modern and future applications of electromagnetism in engineering (2024)</div>
+        </div>
+    </section>
 
-        // Profile picture modal
-        function openProfileModal() {
-            document.getElementById('profileModal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-        function closeProfileModal() {
-            document.getElementById('profileModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeProfileModal();
-                closeMobileMenu();
-            }
-        });
-
-        // Mobile nav toggle with ARIA
-        const menuToggle = document.getElementById('menuToggle');
-        const navPanel = document.getElementById('navPanel');
-        const navMobile = document.getElementById('navMobile');
-        const mobileOverlay = document.getElementById('mobileOverlay');
-        const mobileLinks = document.querySelectorAll('#navMenuMobile a');
-
-        function openMobileMenu() {
-            navPanel.classList.add('open');
-            mobileOverlay.classList.add('show');
-            menuToggle.setAttribute('aria-expanded', 'true');
-            menuToggle.setAttribute('aria-label', 'Close menu');
-            setTimeout(() => { mobileLinks[0]?.focus(); }, 100);
-        }
-        function closeMobileMenu() {
-            navPanel.classList.remove('open');
-            mobileOverlay.classList.remove('show');
-            menuToggle.setAttribute('aria-expanded', 'false');
-            menuToggle.setAttribute('aria-label', 'Open menu');
-            menuToggle.focus();
-        }
-        function toggleMobileMenu() {
-            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-            if (expanded) closeMobileMenu(); else openMobileMenu();
-        }
-
-        menuToggle.addEventListener('click', toggleMobileMenu);
-        mobileOverlay.addEventListener('click', closeMobileMenu);
-        mobileLinks.forEach(a => a.addEventListener('click', closeMobileMenu));
-    </script>
+    <!-- Add a footer/navigation consistent with the rest of your site -->
 </body>
 </html>
